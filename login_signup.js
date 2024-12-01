@@ -1,12 +1,11 @@
-// JavaScript to handle the toggle between Sign In and Sign Up forms
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+// login_signup.js
 
-signUpButton.addEventListener('click', () => {
-  container.classList.add('right-panel-active');
+// Redirect to index.html when Sign In button is clicked
+document.getElementById("signIn").addEventListener("click", function() {
+    window.location.href = "index.html";  // Redirect to index.html
 });
 
-signInButton.addEventListener('click', () => {
-  container.classList.remove('right-panel-active');
+// Redirect to index.html when Sign Up button is clicked
+document.getElementById("signUp").addEventListener("click", function() {
+    window.location.href = "index.html";  // Redirect to index.html
 });
