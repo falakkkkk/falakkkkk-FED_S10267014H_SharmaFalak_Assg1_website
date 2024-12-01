@@ -781,8 +781,21 @@ body, html {
     box-sizing: border-box;
   }
   
+  /* Login Page Specific Styles */
+  body.login-page {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://i.pinimg.com/736x/dd/e9/f9/dde9f992455501e2343e5bb55352486a.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px; /* Ensure space for the navbar */
+  }
+  
   /* Navbar */
-  .navbar {
+  .login-page .navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -797,23 +810,23 @@ body, html {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  .nav-container {
+  .login-page .nav-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
   
-  .nav-links {
+  .login-page .nav-links {
     list-style-type: none;
     display: flex;
     gap: 20px;
   }
   
-  .nav-links li {
+  .login-page .nav-links li {
     display: inline;
   }
   
-  .nav-links a {
+  .login-page .nav-links a {
     text-decoration: none;
     color: white;
     font-size: 16px;
@@ -821,47 +834,34 @@ body, html {
     transition: background-color 0.3s ease;
   }
   
-  .nav-links a:hover {
+  .login-page .nav-links a:hover {
     background-color: #ff758c;
     border-radius: 5px;
   }
   
-  .profile-icon img {
+  .login-page .profile-icon img {
     width: 30px;
     height: 30px;
   }
   
-  .search-form {
+  .login-page .search-form {
     display: flex;
   }
   
-  .search-input {
+  .login-page .search-input {
     padding: 5px;
     border: 2px solid #ccc;
     border-radius: 5px;
   }
   
-  .search-icon {
+  .login-page .search-icon {
     width: 20px;
     height: 20px;
     margin-left: 10px;
   }
   
-  /* Sign In / Sign Up Page */
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-image: url('https://i.pinimg.com/736x/dd/e9/f9/dde9f992455501e2343e5bb55352486a.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 80px; /* Ensure space for the navbar */
-  }
-  
   /* Container */
-  .container {
+  .login-page .container {
     position: relative;
     width: 1050px;
     height: 500px;
@@ -872,7 +872,7 @@ body, html {
   }
   
   /* Form Containers */
-  .form-container {
+  .login-page .form-container {
     position: absolute;
     top: 0;
     height: 100%;
@@ -880,19 +880,19 @@ body, html {
     transition: all 0.6s ease-in-out;
   }
   
-  .sign-in-container {
+  .login-page .sign-in-container {
     left: 0;
     z-index: 2;
   }
   
-  .sign-up-container {
+  .login-page .sign-up-container {
     left: 100%;
     z-index: 1;
     opacity: 0;
   }
   
   /* Form Styling */
-  form {
+  .login-page form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -901,17 +901,17 @@ body, html {
     margin: 0 auto;
   }
   
-  form h1 {
+  .login-page form h1 {
     font-size: 24px;
-    margin-top: 120px; 
-    margin-left: 60px; 
-    margin-bottom: 20px; 
-    text-align: left; 
-    width: auto; 
+    margin-top: 120px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    text-align: left;
+    width: auto;
     color: #333;
   }
   
-  form input {
+  .login-page form input {
     width: 80%;
     margin: 10px 0;
     padding: 5px 0;
@@ -924,15 +924,15 @@ body, html {
     transition: border-color 0.3s ease;
   }
   
-  form input::placeholder {
+  .login-page form input::placeholder {
     color: #aaa;
   }
   
-  form button {
+  .login-page form button {
     margin-top: 20px;
     padding: 10px 20px;
     border: none;
-    border-radius: 20px; 
+    border-radius: 20px;
     background-color: #ff758c;
     color: white;
     font-size: 16px;
@@ -940,23 +940,23 @@ body, html {
     transition: background 0.3s ease;
   }
   
-  form button:hover {
+  .login-page form button:hover {
     background-color: #ff506b;
   }
   
   /* Overlay Container */
-  .overlay-container {
+  .login-page .overlay-container {
     position: absolute;
     top: 0;
     right: 0;
-    width: 50%; /* Make it fill the entire container width */
+    width: 50%;
     height: 100%;
     overflow: hidden;
     z-index: 100;
     transition: transform 0.6s ease-in-out;
   }
   
-  .overlay {
+  .login-page .overlay {
     background-image: url('https://i.pinimg.com/736x/cf/28/5e/cf285ea2af5afa5673dc8201d870ca1c.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -972,28 +972,28 @@ body, html {
   }
   
   /* Active States */
-  .container.right-panel-active .sign-in-container {
+  .login-page .container.right-panel-active .sign-in-container {
     transform: translateX(100%);
     opacity: 0;
     z-index: 1;
   }
   
-  .container.right-panel-active .sign-up-container {
+  .login-page .container.right-panel-active .sign-up-container {
     transform: translateX(-100%);
     opacity: 1;
     z-index: 2;
   }
   
-  .container.right-panel-active .overlay-container {
+  .login-page .container.right-panel-active .overlay-container {
     transform: translateX(-100%);
   }
   
-  .container.right-panel-active .overlay {
-    transform: translateX(0); /* Ensure overlay moves correctly */
+  .login-page .container.right-panel-active .overlay {
+    transform: translateX(0);
   }
   
   /* Buttons */
-  button {
+  .login-page button {
     width: 100px;
     padding: 10px;
     border: none;
@@ -1005,12 +1005,12 @@ body, html {
     transition: 0.3s ease;
   }
   
-  button:hover {
+  .login-page button:hover {
     background-color: #ff7eb3;
   }
   
   /* Top Buttons */
-  .top-button {
+  .login-page .top-button {
     position: absolute;
     top: 10px;
     right: 20px;
@@ -1026,89 +1026,91 @@ body, html {
     z-index: 3;
   }
   
-  .top-button:hover {
+  .login-page .top-button:hover {
     background: rgba(255, 117, 140, 0.2);
     transform: scale(1.1);
   }
   
+  /* Responsive Styles */
   @media (max-width: 768px) {
-    .container {
+    .login-page .container {
       width: 90%;
       height: 600px;
     }
   
-    .overlay-container,
-    .form-container {
+    .login-page .overlay-container,
+    .login-page .form-container {
       width: 100%;
     }
   
-    .overlay {
+    .login-page .overlay {
       background-size: contain;
     }
   
-    .form-container {
+    .login-page .form-container {
       width: 100%;
     }
   
-    form h1 {
+    .login-page form h1 {
       font-size: 20px;
       margin-top: 60px;
       margin-left: 20px;
     }
   
-    form input {
+    .login-page form input {
       width: 90%;
     }
   
-    form button {
+    .login-page form button {
       width: 90%;
       margin-top: 20px;
     }
   
-    .top-button {
+    .login-page .top-button {
       font-size: 12px;
       padding: 6px 12px;
     }
   }
   
   @media (max-width: 480px) {
-    .container {
+    .login-page .container {
       width: 100%;
       height: 500px;
     }
   
-    .overlay-container,
-    .form-container {
+    .login-page .overlay-container,
+    .login-page .form-container {
       width: 100%;
     }
   
-    .overlay {
+    .login-page .overlay {
       background-size: cover;
     }
   
-    .form-container {
+    .login-page .form-container {
       width: 100%;
     }
   
-    form h1 {
+    .login-page form h1 {
       font-size: 18px;
       margin-top: 40px;
       margin-left: 10px;
     }
   
-    form input {
+    .login-page form input {
       width: 80%;
     }
   
-    form button {
+    .login-page form button {
       width: 80%;
       margin-top: 15px;
     }
   
-    .top-button {
+    .login-page .top-button {
       font-size: 10px;
       padding: 6px 12px;
     }
   }
+  
   
   
