@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <nav class="nav-container">
+            <ul class="nav-links left-links">
+                <li><a href="index.html"><img src="images/home_icon.jpg" alt="Home" class="icon home-icon"></a></li>
+                <!-- Shop Dropdown -->
+                <li class="dropdown">
+                    <a href="#">Shop</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product_list.html">Lips</a></li>
+                        <li><a href="#">Face</a></li>
+                        <li><a href="#">Eyes</a></li>
+                        <li><a href="#">Skin</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+            <ul class="nav-links right-links">
+                <li class="profile-icon">
+                    <!-- Linked to login-signup.html -->
+                    <a href="login-signup.html"><img src="images/profile_icon.jpg" alt="Profile" class="icon profile-img"></a>
+                </li>
+                <li>
+                    <form class="search-form" action="/search" method="GET">
+                        <input type="text" name="q" class="search-input" placeholder="Search..." aria-label="Search">
+                        <button type="submit">
+                            <img src="images/search_icon.jpg" alt="Search" class="icon search-icon">
+                        </button>
+                    </form>
+                </li>
+                <li>
+                    <!-- Linked to cart.html -->
+                    <a href="cart.html"><img src="images/bag_icon.jpg" alt="Bag" class="icon"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h1 class="main-title">contact</h1>
+        <p class="intro-text">I would love to hear from you!</p>
+        <p class="email-text">Please fill out the form or email directly at: <br> <a href="zenara@gmail.com">zenara@gmail.com</a></p>
+        
+        <form class="contact-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">NAME</label>
+                    <input type="text" id="name" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" placeholder=" ">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="website">WEBSITE <span>(IF APPLICABLE)</span></label>
+                    <input type="url" id="website" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label for="subject">SUBJECT</label>
+                    <input type="text" id="subject" placeholder=" ">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group full-width">
+                    <label for="message">MESSAGE</label>
+                    <textarea id="message" placeholder=" "></textarea>
+                </div>
+            </div>
+            <button type="submit" class="submit-button">SUBMIT</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer2>
+        <div class="footer-top">
+            <div class="newsletter">
+                <h3>NEWSLETTER</h3>
+                <form>
+                    <input type="email" placeholder="EMAIL">
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </div>
+            <div class="snapchat">
+                <h3>SNAPCHAT</h3>
+                <img src="snapchat-placeholder.png" alt="Snapchat Code">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#">&#xf09a;</a> <!-- Facebook -->
+                <a href="#">&#xf16d;</a> <!-- Pinterest -->
+                <a href="#">&#xf16a;</a> <!-- Instagram -->
+                <a href="#">&#xf099;</a> <!-- Twitter -->
+                <a href="#">&#xf2ac;</a> <!-- Snapchat -->
+            </div>
+            <p>SITE BY STUDIO 9 CO. - WHITE OAK CREATIVE</p>
+        </div>
+    </footer2>
+</body>
+</html>
