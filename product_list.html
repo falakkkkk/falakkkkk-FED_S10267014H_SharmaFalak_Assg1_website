@@ -7,39 +7,43 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <nav class="nav-container">
-        <ul class="nav-links left-links">
-            <li><a href="index.html"><img src="images/home_icon.jpg" alt="Home" class="icon home-icon"></a></li>
-            <!-- Shop Dropdown -->
-            <li class="dropdown">
-                <a href="#">Shop</a>
-                <ul class="dropdown-menu">
-                    <li><a href="product_list.html">Lips</a></li>
-                    <li><a href="#">Face</a></li>
-                    <li><a href="#">Eyes</a></li>
-                    <li><a href="#">Skin</a></li>
-                </ul>
-            </li>
-            <li><a href="contact_us.html">Contact Us</a></li>
-        </ul>
-        <ul class="nav-links right-links">
-            <li class="profile-icon">
-                <a href="login_signup.html"><img src="images/profile_icon.jpg" alt="Profile" class="icon profile-img"></a>
-            </li>
-            <li>
-                <form class="search-form" action="/search" method="GET">
-                    <input type="text" name="q" class="search-input" placeholder="Search..." aria-label="Search">
-                    <button type="submit">
-                        <img src="images/search_icon.jpg" alt="Search" class="icon search-icon">
-                    </button>
-                </form>
-            </li>
-            <li><a href="cart.html"><img src="images/bag_icon.jpg" alt="Bag" class="icon"></a></li>
-        </ul>
-    </nav>
-  </header>
-  
+    <header class="navbar">
+        <nav class="nav-container">
+            <ul class="nav-links left-links">
+                <li><a href="index.html"><img src="images/home_icon.jpg" alt="Home" class="icon home-icon"></a></li>
+                <!-- Shop Dropdown -->
+                <li class="dropdown">
+                    <a href="#">Shop</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product_list.html">Lips</a></li>
+                        <li><a href="#">Face</a></li>
+                        <li><a href="#">Eyes</a></li>
+                        <li><a href="#">Skin</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+            <ul class="nav-links right-links">
+                <li class="profile-icon">
+                    <!-- Linked to login-signup.html -->
+                    <a href="login-signup.html"><img src="images/profile_icon.jpg" alt="Profile" class="icon profile-img"></a>
+                </li>
+                <li>
+                    <form class="search-form" action="/search" method="GET">
+                        <input type="text" name="q" class="search-input" placeholder="Search..." aria-label="Search">
+                        <button type="submit">
+                            <img src="images/search_icon.jpg" alt="Search" class="icon search-icon">
+                        </button>
+                    </form>
+                </li>
+                <li>
+                    <!-- Linked to cart.html -->
+                    <a href="cart.html"><img src="images/bag_icon.jpg" alt="Bag" class="icon"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
   <header>
     <h1>Lip Products</h1>
     <section class="filters">
@@ -78,7 +82,7 @@
   <main class="product-grid1">
     <!-- Product 1 -->
     <article class="product-card1">
-      <a href="product.html" class="product-link">
+      <a href="chosen_product.html" class="product-link">
         <figure class="product-image1" style="background-image: url('images/lipstick_product.jpg');"></figure>
         <section class="product-info1">
           <h2>Velvet Reverie</h2>

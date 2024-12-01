@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-container">
+            <ul class="nav-links left-links">
+                <li><a href="index.html"><img src="images/home_icon.jpg" alt="Home" class="icon home-icon"></a></li>
+                <!-- Shop Dropdown -->
+                <li class="dropdown">
+                    <a href="#">Shop</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product_list.html">Lips</a></li>
+                        <li><a href="#">Face</a></li>
+                        <li><a href="#">Eyes</a></li>
+                        <li><a href="#">Skin</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+            <ul class="nav-links right-links">
+                <li class="profile-icon">
+                    <!-- Linked to login-signup.html -->
+                    <a href="login-signup.html"><img src="images/profile_icon.jpg" alt="Profile" class="icon profile-img"></a>
+                </li>
+                <li>
+                    <form class="search-form" action="/search" method="GET">
+                        <input type="text" name="q" class="search-input" placeholder="Search..." aria-label="Search">
+                        <button type="submit">
+                            <img src="images/search_icon.jpg" alt="Search" class="icon search-icon">
+                        </button>
+                    </form>
+                </li>
+                <li>
+                    <!-- Linked to cart.html -->
+                    <a href="cart.html"><img src="images/bag_icon.jpg" alt="Bag" class="icon"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Below the first navbar, display shopping cart, shipping, and payment -->
+    <div class="sub-navbar">
+        <nav class="nav-links">
+            <a href="#">Shopping Cart</a>
+            <a href="#">Shipping</a>
+            <a href="#">Payment</a>
+        </nav>
+    </div>
+    
+
+    <!-- Main Content -->
+    <div class="cart-page">
+        <!-- Shopping Cart Section -->
+        <div class="shopping-cart">
+            <h1 class="shopping-cart-header">Shopping Cart</h1>
+
+            <!-- Cart Item -->
+            <div class="cart-item">
+                <img src="images/lipstick_product.jpg" alt="Lip Product">
+                <div class="item-info">
+                    <h2>Rouge Élégance Couture</h2>
+                    <p>Lavender Scent</p>
+                    <p class="price">$45.00</p>
+                    <div class="quantity">
+                        
+                        <select id="quantity" class="quantity-dropdown">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <button class="remove-item">Remove</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+<div class="summary">
+    <h1 class="summary-header">Total</h1>
+    <div class="summary-details">
+        <p><span>Subtotal:</span> <span id="subtotal">$18.71</span></p>
+        <p><span>Shipping:</span> <span>Calculated on checkout</span></p>
+    </div>
+
+    <!-- Added line before Total -->
+    <hr class="divider">
+
+    <div class="summary-total">
+        <span>Total:</span> <span id="total">$18.71</span>
+    </div>
+
+    <!-- Updated Discount Code Section -->
+    <div class="discount-code">
+        <input type="text" placeholder="Discount Code">
+        <button class="apply-code">→</button>
+    </div>
+    <button class="checkout-btn">Checkout Now</button>
+    <a href="#" class="continue-shopping">Continue Shopping</a>
+</div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer1>
+        <p>© 2024 I'm from</p>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>
+

@@ -1214,8 +1214,400 @@ body, html {
     color: #333;
     font-weight: bold;
   }
+
+
+/* Chosen Product */
+
+.product-page {
+    display: flex;
+    width: 100vw; /* Full width of viewport */
+    height: 100vh; /* Full height of viewport */
+  }
+  
+  /* Left Panel: White background */
+  .left-panel {
+    width: 50%; /* Adjust to take up half of the page */
+    background-color: white;
+    display: flex;
+    flex-direction: row; /* Align image and tabs horizontally */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px;
+  }
+  
+  /* Right Panel: Pinkish background */
+  .right-panel {
+    width: 50%; /* Right panel takes up the other half */
+    background-color: rgba(142, 58, 58, 0.58);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+  }
+  
+  /* Product Image Section */
+  .image-section {
+    width: 70%; /* Adjusted width for the image */
+    margin-right: 20px; /* Space between image and tabs */
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+  
+/* Tab Links beside Image */
+.tab-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 20px;
+}
+
+.tab-link {
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    text-transform: uppercase;
+    text-decoration: none; /* No underline */
+    background: none; /* No background color */
+    border: none; /* No border */
+    padding: 0; /* No padding */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
+}
+
+.tab-link:hover {
+    color: #000; /* Darker text color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.tab-link.active {
+    color: #000; /* Active tab color */
+    text-decoration: underline; /* Underline for active tab */
+}
+
+
+  
+/* Right Panel Product Info */
+.right-panel h1 {
+    margin-top: -40px;
+    font-family: 'Times New Roman';
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    text-align: left;
+}
+label {
+    display: inline-block; /* Aligns labels inline */
+    width: 150px;
+    margin-left: -100px; /* Fixed width for consistent alignment */
+    font-weight: bold; /* Makes the label text bold */
+    font-size: 1.2rem; /* Adjust font size */
+    color: #333; /* Darker text color for readability */
+}
+.skin-shades,
+.lipstick-scent,
+.price {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: inline-block;
+    width: 150px; /* Fixed width to align labels */
+    font-weight: bold;
+}
+
+.shade-selector,
+.scent-boxes {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.shade-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.shade-box:hover {
+    transform: scale(1.1);
+}
+
+.scent-box {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scent-box:hover {
+    background-color: #e6e6e600;
+    transform: scale(1.05);
+}
+
+.add-to-cart {
+    padding: 15px 25px;
+    background: black;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background: #444;
+}
+
   
   
   
   
-  
+/* Cart */
+/* General Styles */
+
+
+/* Sub Navbar Styling */
+.sub-navbar {
+    background-color: #FBF8F5; /* Matches the body background color */
+    border-top: 1px solid #E6E6E6; /* Adds a divider between the navbars */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for the links in the sub-navbar */
+.sub-navbar .nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.sub-navbar .nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #4B4B4B;
+    font-weight: 500;
+}
+
+.sub-navbar .nav-links a.active {
+    font-weight: bold;
+}
+
+.sub-navbar .nav-links a.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #4B4B4B;
+    margin-top: 0.3rem;
+}
+
+
+
+
+/* Cart Page Layout */
+.cart-page {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 10%; /* Adjust layout */
+    gap: 2rem; /* Added gap between sections */
+}
+
+/* Shopping Cart Section */
+.shopping-cart {
+    width: 65%;
+}
+
+.shopping-cart-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.shopping-cart-header::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #E6E6E6;
+    margin-top: 0.5rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #E6E6E6;
+    padding-bottom: 1rem;
+}
+
+.cart-item img {
+    width: 80px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-info h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    color: #4B4B4B;
+}
+
+.item-info p {
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+    color: #797979;
+}
+
+.item-info .price {
+    font-size: 1rem;
+    color: #4B4B4B;
+}
+
+.quantity {
+    margin-top: 1rem;
+}
+
+.quantity label {
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+.quantity select {
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    color: #4B4B4B;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    color: #D9534F;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 0.5rem;
+}
+
+/* Summary Section */
+.summary {
+    width: 30%;
+}
+
+.summary-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.summary-header::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #E6E6E6;
+    margin-top: 0.5rem;
+}
+
+.summary-details {
+    margin-bottom: 1.5rem;
+}
+
+.summary-details p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+/* Added divider line before the Total */
+/* Added margin to the divider to move it down */
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #E6E6E6;
+    margin: 1.5rem 0;  /* Adjust this margin to move the line down */
+}
+
+/* Add margin-top to the summary-total section to move it down */
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 2rem 0; /* Increased space to move total and below content down */
+}
+
+
+.discount-code {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #E6E6E6;
+}
+
+.discount-code input {
+    flex: 1;
+    padding: 0.5rem;
+    background-color: pink;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.discount-code button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #4B4B4B;
+    cursor: pointer;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #4B4B4B;
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+.continue-shopping {
+    display: block;
+    margin-top: 1.5rem;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #797979;
+}
+
+
+

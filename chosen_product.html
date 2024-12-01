@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="chosen_product.js"></script>
+  <title>Foundation Product Page</title>
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-container">
+            <ul class="nav-links left-links">
+                <li><a href="index.html"><img src="images/home_icon.jpg" alt="Home" class="icon home-icon"></a></li>
+                <!-- Shop Dropdown -->
+                <li class="dropdown">
+                    <a href="#">Shop</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product_list.html">Lips</a></li>
+                        <li><a href="#">Face</a></li>
+                        <li><a href="#">Eyes</a></li>
+                        <li><a href="#">Skin</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+            <ul class="nav-links right-links">
+                <li class="profile-icon">
+                    <!-- Linked to login-signup.html -->
+                    <a href="login-signup.html"><img src="images/profile_icon.jpg" alt="Profile" class="icon profile-img"></a>
+                </li>
+                <li>
+                    <form class="search-form" action="/search" method="GET">
+                        <input type="text" name="q" class="search-input" placeholder="Search..." aria-label="Search">
+                        <button type="submit">
+                            <img src="images/search_icon.jpg" alt="Search" class="icon search-icon">
+                        </button>
+                    </form>
+                </li>
+                <li>
+                    <!-- Linked to cart.html -->
+                    <a href="cart.html"><img src="images/bag_icon.jpg" alt="Bag" class="icon"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+
+  <main class="product-page">
+    <aside class="left-panel">
+      <section class="image-section">
+        <img src="images/lipstick_product.png" alt="Lips Product Image" class="product-image">
+      </section>
+      <nav class="tab-links">
+        <button class="tab-link active" data-target="product">Product</button>
+        <button class="tab-link" data-target="description">Description</button>
+        <button class="tab-link" data-target="notes">Notes</button>
+        <button class="tab-link" data-target="reviews">Reviews</button>
+      </nav>
+    </aside>
+
+    <section class="right-panel">
+      <h1>Rouge Élégance Couture</h1>
+      <section class="skin-shades">
+        <label for="shades">Choose Shade</label>
+        <div class="shade-selector">
+          <span class="shade-box" style="background-color: #ffccd9;"></span>
+          <span class="shade-box" style="background-color: #f5a9b8;"></span>
+          <span class="shade-box" style="background-color: #e74c3c;"></span>
+          <span class="shade-box" style="background-color: #c0392b;"></span>
+        </div>
+      </section>
+
+      <section class="lipstick-scent">
+        <label>Scent</label>
+        <div class="scent-boxes">
+          <span class="scent-box">Rose</span>
+          <span class="scent-box">Lavender</span>
+          <span class="scent-box">No Scent</span>
+        </div>
+      </section>
+
+      <section class="price">
+        <p>Price: SGD 45.00</p>
+      </section>
+      <button class="add-to-cart">Add to Cart</button>
+    </section>
+  </main>
+</body>
+</html>
+
