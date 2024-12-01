@@ -40,38 +40,37 @@
         </nav>
     </header>
     
+    <section class="container" id="container">
+        <!-- Sign Up Form -->
+        <article class="form-container sign-up-container">
+            <form action="#">
+                <a href="index.html" class="top-button ghost" id="signIn">Sign In</a>  <!-- Sign In redirect -->
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <button>Sign Up</button>
+            </form>
+        </article>
 
-  <section class="container" id="container">
-    <!-- Sign Up Form -->
-    <article class="form-container sign-up-container">
-      <form action="#">
-        <button class="top-button ghost" id="signIn">Sign In</button>
-        <h1>Create Account</h1>
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <button>Sign Up</button>
-      </form>
-    </article>
+        <!-- Sign In Form -->
+        <article class="form-container sign-in-container">
+            <form action="#">
+                <a href="index.html" class="top-button ghost" id="signUp">Sign Up</a>  <!-- Sign Up redirect -->
+                <h1>Sign In</h1>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <a href="#">Forgot your password?</a>
+                <button>Sign In</button>
+            </form>
+        </article>
 
-    <!-- Sign In Form -->
-    <article class="form-container sign-in-container">
-      <form action="#">
-        <button class="top-button ghost" id="signUp">Sign Up</button>
-        <h1>Sign In</h1>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <a href="#">Forgot your password?</a>
-        <button>Sign In</button>
-      </form>
-    </article>
+        <!-- Overlay Section -->
+        <aside class="overlay-container">
+            <section class="overlay"></section>
+        </aside>
+    </section>
 
-    <!-- Overlay Section -->
-    <aside class="overlay-container">
-      <section class="overlay"></section>
-    </aside>
-  </section>
-
-  <script src="login_signup.js"></script>
+    <script src="login_signup.js"></script>
 </body>
 </html>
