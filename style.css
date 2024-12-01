@@ -299,8 +299,7 @@ body, html {
 .product-info {
     text-align: center;
     margin-top: 10px;
-    padding: 10px 0; /* Add padding between image and text */
-    background-color: #ffffff; /* Background color for the text area */
+    padding: 10px 0; /* Add padding between image and text */ 
 }
 
 .product-name {
@@ -773,3 +772,265 @@ body, html {
         font-size: 0.8rem;
     }
 }
+
+/* Login-SignUp Page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://i.pinimg.com/736x/dd/e9/f9/dde9f992455501e2343e5bb55352486a.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Container */
+  .container {
+    position: relative;
+    width: 1050px;
+    height: 500px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  /* Form Containers */
+  .form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .sign-in-container {
+    left: 0;
+    z-index: 2;
+  }
+  
+  .sign-up-container {
+    left: 100%;
+    z-index: 1;
+    opacity: 0;
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  form h1 {
+    font-size: 24px;
+    margin-top: 120px; 
+    margin-left: 60px; 
+    margin-bottom: 20px; 
+    text-align: left; 
+    width: auto; 
+    color: #333;
+  }
+  
+  form input {
+    width: 80%;
+    margin: 10px 0;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background-color: transparent;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input::placeholder {
+    color: #aaa;
+  }
+  
+  form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; 
+    background-color: #ff758c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #ff506b;
+  }
+  
+  /* Overlay Container */
+  .overlay-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; /* Make it fill the entire container width */
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .overlay {
+    background-image: url('https://i.pinimg.com/736x/cf/28/5e/cf285ea2af5afa5673dc8201d870ca1c.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  /* Active States */
+  .container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .container.right-panel-active .sign-up-container {
+    transform: translateX(-100%);
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+  }
+  
+  .container.right-panel-active .overlay {
+    transform: translateX(0); /* Ensure overlay moves correctly */
+  }
+  
+  /* Buttons */
+  button {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    background-color: #ff758c;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff7eb3;
+  }
+  
+  /* Top Buttons */
+  .top-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: transparent;
+    border: 2px solid #ff758c;
+    color: #ff758c;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 3;
+  }
+  
+  .top-button:hover {
+    background: rgba(255, 117, 140, 0.2);
+    transform: scale(1.1);
+  }
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+      height: 600px;
+    }
+  
+    .overlay-container,
+    .form-container {
+      width: 100%;
+    }
+  
+    .overlay {
+      background-size: contain;
+    }
+  
+    .form-container {
+      width: 100%;
+    }
+  
+    form h1 {
+      font-size: 20px;
+      margin-top: 60px;
+      margin-left: 20px;
+    }
+  
+    form input {
+      width: 90%;
+    }
+  
+    form button {
+      width: 90%;
+      margin-top: 20px;
+    }
+  
+    .top-button {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 100%;
+      height: 500px;
+    }
+  
+    .overlay-container,
+    .form-container {
+      width: 100%;
+    }
+  
+    .overlay {
+      background-size: cover;
+    }
+  
+    .form-container {
+      width: 100%;
+    }
+  
+    form h1 {
+      font-size: 18px;
+      margin-top: 40px;
+      margin-left: 10px;
+    }
+  
+    form input {
+      width: 80%;
+    }
+  
+    form button {
+      width: 80%;
+      margin-top: 15px;
+    }
+  
+    .top-button {
+      font-size: 10px;
+      padding: 6px 12px;
+    }
+  }
