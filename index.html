@@ -1,10 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenara</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Black Header Section -->
+    <section class="black-header">
+        <h1 class="site-name">Zenara</h1>
+    </section>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <nav class="nav-container">
+            <ul class="nav-links left-links">
+                <li><a href="index.html"><img src="home_icon.jpg" alt="Home" class="icon home-icon"></a></li>
+                <!-- Shop Dropdown -->
+                <li class="dropdown">
+                    <a href="#">Shop</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="face.html">Lips</a></li>
+                        <li><a href="#">Face</a></li>
+                        <li><a href="#">Eyes</a></li>
+                        <li><a href="#">Skin</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+            <ul class="nav-links right-links">
+                <li class="profile-icon">
+                    <a href="profile_icon.jpg"><img src="profile_icon.jpg" alt="Profile" class="icon profile-img"></a>
+                </li>
+                <li>
+                    <form class="search-form" action="/search" method="GET">
+                        <input type="text" name="q" class="search-input" placeholder="Search..." aria-label="Search">
+                        <button type="submit">
+                            <img src="search_icon.jpg" alt="Search" class="icon search-icon">
+                        </button>
+                    </form>
+                </li>
+                <li><a href="cart.html"><img src="bag_icon.jpg" alt="Bag" class="icon"></a></li>
+            </ul>
+        </nav>
+    </header>
     
-</body>
+    <!-- Banner Section -->
+    <section class="full-page">
+        <img src="banner.png" alt="Banner Image" class="banner-img">
+    </section>
+        
+    <!-- Categories Section -->
+    <section class="categories">
+        <header>
+            <h2 class="section-title">Categories</h2>
+            <p class="section-subtitle">Browse through our curated choices</p>
+        </header>
+        <article class="category-icons">
+            <article class="category">
+                <a href="face.html">
+                    <figure class="icon-circle">
+                        <img src="lip_category.jpg" alt="Lips">
+                    </figure>
+                    <p>LIPS</p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="lips.html">
+                    <figure class="icon-circle">
+                        <img src="foundation_category.jpg" alt="Face">
+                    </figure>
+                    <p>FACE</p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="eyes.html">
+                    <figure class="icon-circle">
+                        <img src="eye_category.jpg" alt="Eyes">
+                    </figure>
+                    <p>EYES</p>
+                </a>
+            </article>
+            <article class="category">
+                <a href="skin.html">
+                    <figure class="icon-circle">
+                        <img src="skin_category.jpg" alt="Skin">
+                    </figure>
+                    <p>SKIN</p>
+                </a>
+            </article>
+        </article>
+    </section>
+
+    <!-- Best Sellers Section -->
+    <section class="best-sellers">
+        <h2 class="section-title1">Must Haves</h2>
+        <section class="products-grid">
+            <article class="product">
+                <img src="lipstick_product.png" alt="Product Image 1">
+                <div class="product-info">
+                    <h3 class="product-name">Rouge Élégance Couture</h3>
+                    <p class="product-price">$45.00</p>
+                    <p class="rating">★★★★★</p>
+                </div>
+            </article>
+            <article class="product">
+                <img src="best_seller_palette.png" alt="Product Image 3">
+                <div class="product-info">
+                    <h3 class="product-name">Desert Sands Eye Shadow Palette</h3>
+                    <p class="product-price">$67.00</p>
+                    <p class="rating">★★★★★</p>
+                </div>
+            </article>
+            <article class="product">
+                <img src="best_seller_mascara.png" alt="Product Image 2">
+                <div class="product-info">
+                    <h3 class="product-name">Mascaraé</h3>
+                    <p class="product-price">$28.00</p>
+                    <p class="rating">★★★★★</p>
+                </div>
+            </article>
+            <article class="product">
+                <img src="best_seller_blush.png" alt="Product Image 4">
+                <div class="product-info">
+                    <h3 class="product-name">Crimson Bloom Blush</h3>
+                    <p class="product-price">$52.00</p>
+                    <p class="rating">★★★★★</p>
+                </div>
+            </article>
+        </section>
+    </section> 
+    
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <header class="reviews-title">
+            <h2>Reviews of Real People</h2>
+            <button class="arrow left-arrow" onclick="prevSlide()">←</button>
+            <button class="arrow right-arrow" onclick="nextSlide()">→</button>
+        </header>
+        <article class="reviews-slider">
+            <section class="reviews-container">
+                <article class="reviews-slide">
+                    <blockquote class="review-card">
+                        <img src="customer_1.jpg" alt="User 1">
+                        <p>"Amazing product!"</p>
+                        <footer><h4>User 1</h4></footer>
+                    </blockquote>
+                    <blockquote class="review-card">
+                        <img src="customer_2.jpg" alt="User 2">
+                        <p>"Changed my life!"</p>
+                        <footer><h4>User 2</h4></footer>
+                    </blockquote>
+                    <blockquote class="review-card">
+                        <img src="customer_3.jpg" alt="User 3">
+                        <p>"Highly recommend!"</p>
+                        <footer><h4>User 3</h4></footer>
+                    </blockquote>
+                </article>
+                <article class="reviews-slide">
+                    <blockquote class="review-card">
+                        <img src="customer_4.jpg" alt="User 4">
+                        <p>"Will buy again!"</p>
+                        <footer><h4>User 4</h4></footer>
+                    </blockquote>
+                    <blockquote class="review-card">
+                        <img src="customer_5.jpg" alt="User 5">
+                        <p>"Perfect gift!"</p>
+                        <footer><h4>User 5</h4></footer>
+                    </blockquote>
+                    <blockquote class="review-card">
+                        <img src="customer_6.jpg" alt="User 6">
+                        <p>"Absolutely loved it!"</p>
+                        <footer><h4>User 6</h4></footer>
+                    </blockquote>
+                </article>
+            </section>
+        </article>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <section class="footer-container">
+            <section class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Learn</a></li>
+                </ul>
+            </section>
+            <section class="footer-column">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Find a Store</a></li>
+                </ul>
+            </section>
+            <section class="footer-column">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Wholesale Inquiries</a></li>
+                    <li><a href="#">In the Press</a></li>
+                </ul>
+            </section>
+            <section class="footer-column social-media">
+                <h3>Social</h3>
+                <ul>
+                    <li><a href="#"><img src="instagram_icon.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="facebook-icon.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="tiktok-icon.png" alt="TikTok"></a></li>
+                </ul>
+            </section>
+            <section class="footer-column newsletter">
+                <h3>Sign up to get 25% off</h3>
+                <p>Major new product launch is coming soon. Get notified!</p>
+                <form action="#" method="post">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">&#10140;</button>
+                </form>
+            </section>
+        </section>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Zenara. All rights reserved.</p> 
+        </div> 
+    </footer>
+    <script src="scripts.js"></script>
+<body>
 </html>

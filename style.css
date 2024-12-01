@@ -1,0 +1,775 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Black Header Section */
+.black-header {
+    background-color: black;
+    font-family: 'Brush Script MT';
+    color: white;
+    padding: 10px;
+    text-align: center;
+    height: 65px;
+}
+
+.site-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: -10;
+    padding: 0;
+}
+
+.left-links {
+    justify-content: flex-start;
+    margin-left: -240px;
+}
+
+.right-links {
+    justify-content: flex-end;
+    margin-right: -180px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.home-icon {
+    width: 30px; /* Desired size */
+    height: 30px; /* Ensure it matches width for proper scaling */
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-top: -7px;
+    margin-right: 8px; /* Adds space between the icon and text */
+    vertical-align: middle;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    list-style: none;
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: white;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* Style for search form */
+.search-form {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-input {
+    display: none; /* Hidden by default */
+    width: 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+/* Show input when focused or icon is clicked */
+.search-form:hover .search-input,
+.search-input:focus {
+    display: inline-block;
+    width: 150px; /* Expand width */
+    opacity: 1;
+}
+
+/* Search button styling */
+.search-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.search-input:focus {
+    outline: none; /* Removes focus border */
+}
+
+
+/* Homepage Banner */
+.banner-img {
+    width: 100%;          /* Ensure full width */
+    height: 900px;        /* Set desired height */
+    object-fit: cover;    /* Ensures the image scales and crops proportionally */
+    object-position: top; /* Crops the image from the top */
+}
+
+/* Categories Section */
+.categories {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
+    text-align: center; /* Centers text */
+    padding: 40px 20px;
+    
+    box-sizing: border-box; /* Ensures padding doesn’t affect height */
+}
+
+.section-title {
+    background-color: white;
+    color: #913b3b;
+    font-family: 'Times New Roman' ;
+    font-size: 3.5rem;
+    margin-top: -6px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    margin: -4px 0 0; /* Add minimal margin if needed */
+}
+
+.category-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 125px;
+    flex-wrap: wrap;
+}
+
+.category {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.icon-circle {
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    width: 220px;
+    height: 250px;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.icon-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category p {
+    font-weight: bold;
+    margin: 0;
+    
+}
+
+.category a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.category:hover a {
+    color: #d18c8c;
+}
+
+.category:hover .icon-circle {
+    transform: scale(1.2);
+}
+
+
+/* Best Sellers Section */
+.best-sellers {
+    padding: 40px 20px;
+    margin-top: 35px;
+    text-align: center;
+    background-color: #9445458b; /* Light background color */
+}
+
+/* Title */
+.section-title1 {
+    color: black; /* Dark text color for contrast */
+    font-size: 3rem; /* Font size */
+    font-family: 'Times New Roman'; /* Font style */
+    padding: 15px 20px;
+    text-align: center; /* Center the title */
+    margin-top: -5px ;
+    margin-bottom: 30px; /* Add space below the title */
+}
+
+/* Products Grid */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Space between items */
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Product Card without Borders or Shadows */
+.product {
+    width: 350px; /* Fixed width for the card */
+    height: auto; /* Allow height to adjust to the content */
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* Product Image */
+.product img {
+    width: 100%; /* Fill the width of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+.product:hover img {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+
+/* Product Info */
+.product-info {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 0; /* Add padding between image and text */
+    background-color: #ffffff; /* Background color for the text area */
+}
+
+.product-name {
+    font-size: 1.2rem;
+    color: #000000;
+    margin: 5px 0;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: #000000;
+    margin: 0;
+}
+
+
+
+
+/* Sales Offers */
+.sales-offers {
+    display: flex;
+    gap: 20px; /* Space between sale boxes */
+    justify-content: space-between;
+    margin: 30px 50px; /* Adds space from the edges of the page */
+    padding: 20px; /* Internal spacing inside the container */
+}
+
+.sale {
+    height: 300px; /* Adjust height */
+    background-size: cover; /* Ensures background image covers box */
+    background-position: center;
+    flex: 1; /* Flexbox to evenly distribute width */
+    text-align: center;
+    padding: 40px 20px; /* Internal spacing inside the sale box */
+    position: relative; /* Allows positioning of child elements like buttons */
+}
+
+
+.sale:first-child {
+    background-image: url('lipstick_sale.png'); /* Replace with your image */
+}
+
+.sale:nth-child(2) {
+    background-image: url('lipstick_sale.png'); /* Replace with your image */
+}
+
+.sale button {
+    position: absolute;
+    bottom: 60px; /* Move the button down */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    background-color: rgba(123, 72, 72, 0.854);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.sale button:hover {
+    background-color: #ddd; /* Optional hover effect */
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .text-and-products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products-line {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sales-offers {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar, .logo-section {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .category-icons {
+        gap: 50px;
+    }
+}
+
+  
+
+/* General Section Styling */
+.reviews-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.reviews-title {
+    font-size: 3.5rem;
+    font-family: 'Times New Roman';
+    color: #913b3b;
+    margin-bottom: 20px;
+    position: relative; /* Allows positioning of arrows next to the title */
+    display: inline-block;
+}
+
+.arrow {
+    position: absolute;
+    top: 0; /* Aligns with the header */
+    background: none;
+    color: #333; /* Elegant dark gray */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.8rem; /* Larger, elegant arrows */
+    transition: transform 0.2s ease, color 0.2s ease; /* Smooth hover effect */
+}
+
+.arrow:hover {
+    color: #000; /* Darker on hover */
+    transform: scale(1.2); /* Slight enlargement */
+}
+
+.left-arrow {
+    right: -400px; /* Move farther right */
+}
+
+.right-arrow {
+    right: -500px; /* Adjust relative to the left arrow */
+}
+
+
+/* Reviews Slider */
+.reviews-slider {
+    margin-top: 20px;
+    position: relative;
+}
+
+.reviews-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%; /* Adjust based on the number of slides */
+    overflow: hidden;
+}
+
+/* Ensure parent containers allow overflow */
+.reviews-section,
+.reviews-container,
+.reviews-slide {
+    overflow: visible; /* Allow content to extend beyond boundaries */
+}
+
+/* Review Card */
+.review-card {
+    flex: 0 0 30%; /* Ensure three cards fit per slide */
+    margin: 0 10px; /* Adjust spacing between cards */
+    background-color: #fff;
+    padding: 40px 20px; /* Padding for content inside the box */
+    min-height: 250px; /* Height of the card */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #913b3b; /* Border for the card */
+    border-radius: 10px;
+    position: relative; /* Context for positioning the image */
+    overflow: visible; /* Ensure content inside card can overflow */
+}
+
+/* Circular Image */
+.review-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: -40px; /* Moves the image upwards to be half inside, half outside */
+    left: 50%;
+    transform: translateX(-50%); /* Center the image horizontally */
+    border: 3px solid #fff; /* Optional: Add a border to the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+
+
+.reviews-slide {
+    display: flex;
+    justify-content: space-between; /* Ensure even spacing */
+    width: 100%; /* Full-width slides */
+    gap: 20px; /* Space between cards */
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .review-card {
+        flex: 0 0 80%; /* Adjust card width for smaller screens */
+    }
+
+    .arrow {
+        top: -10px; /* Adjust arrow position for smaller screens */
+        font-size: 1.2rem;
+    }
+
+    .left-arrow {
+        right: 70px;
+    }
+
+    .right-arrow {
+        right: 10px;
+    }
+}
+
+.site-footer {
+    background-color: #913b3b;
+    color: #fff;
+    padding: 1rem 1rem; /* Reduced padding */
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem; /* Reduced gap */
+}
+
+.footer-column {
+    flex: 1 1 20%;
+    min-width: 150px; /* Reduced min-width */
+}
+
+.footer-column h3 {
+    font-size: 1rem; /* Reduced font size */
+    margin-bottom: 0.5rem; /* Reduced margin */
+    color: #fff;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.25rem; /* Reduced margin */
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media ul {
+    display: flex;
+    gap: 0.75rem; /* Reduced gap */
+}
+
+.newsletter form {
+    display: flex;
+    gap: 0.25rem; /* Reduced gap */
+}
+
+.newsletter input {
+    padding: 0.25rem; /* Reduced padding */
+    flex: 1;
+    border: none;
+    border-radius: 4px;
+}
+
+.newsletter button {
+    padding: 0.25rem;
+    width: -120px; /* Set a specific width */
+    border: none;
+    background: #fff;
+    color: #b45f42;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem; /* Reduced margin */
+    font-size: 0.8rem; /* Reduced font size */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem; /* Reduced gap */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+}
+
+.certifications {
+    margin-top: 0.5rem; /* Reduced margin */
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem; /* Reduced gap */
+}
+/* General Responsive Styling */
+@media (max-width: 1024px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .left-links, .right-links {
+        margin: 0;
+    }
+
+    /* Categories Section */
+    .category-icons {
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    .icon-circle {
+        width: 180px;
+        height: 200px;
+    }
+
+    /* Sales Offers */
+    .sales-offers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sale {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Homepage Banner */
+    .banner-img {
+        height: 400px; /* Adjusted height for smaller screens */
+    }
+
+    /* Reviews Section */
+    .reviews-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 90%; /* Adjust card width for smaller screens */
+    }
+
+    .arrow {
+        top: -10px; /* Adjust arrow position for smaller screens */
+        font-size: 1.2rem;
+    }
+
+    .left-arrow {
+        right: 70px;
+    }
+
+    .right-arrow {
+        right: 10px;
+    }
+
+    /* Categories Section */
+    .category-icons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .icon-circle {
+        width: 150px;
+        height: 180px;
+    }
+
+    /* Best Sellers Section */
+    .products-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product {
+        width: 90%;
+    }
+
+    /* Sales Offers */
+    .sales-offers {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .social-media ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Navbar */
+    .nav-links a {
+        font-size: 0.9rem; /* Reduce font size */
+    }
+
+    /* Section Titles */
+    .section-title, .reviews-title, .section-title1 {
+        font-size: 2rem; /* Adjust for smaller screens */
+    }
+
+    /* Review Cards */
+    .review-card {
+        padding: 20px;
+    }
+
+    .review-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Footer */
+    .footer-column h3 {
+        font-size: 0.9rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.7rem;
+    }
+
+    .newsletter input {
+        font-size: 0.8rem;
+    }
+
+    .newsletter button {
+        font-size: 0.8rem;
+    }
+}
