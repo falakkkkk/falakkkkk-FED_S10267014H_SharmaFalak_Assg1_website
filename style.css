@@ -854,7 +854,7 @@ body, html {
     margin-left: 10px;
   }
   
-  /* Container for login/signup panels */
+  /* Container */
   .login-page .container {
     position: relative;
     width: 1050px;
@@ -863,10 +863,9 @@ body, html {
     border-radius: 10px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    display: flex;
   }
   
-  /* Form Containers (Left and Right Panel) */
+  /* Form Containers */
   .login-page .form-container {
     position: absolute;
     top: 0;
@@ -939,7 +938,7 @@ body, html {
     background-color: #ff506b;
   }
   
-  /* Overlay Container (background image on right side) */
+  /* Overlay Container */
   .login-page .overlay-container {
     position: absolute;
     top: 0;
@@ -966,7 +965,7 @@ body, html {
     transition: transform 0.6s ease-in-out;
   }
   
-  /* Active States (for sign-in to sign-up transition) */
+  /* Active States */
   .login-page .container.right-panel-active .sign-in-container {
     transform: translateX(100%);
     opacity: 0;
@@ -1106,6 +1105,116 @@ body, html {
       padding: 6px 12px;
     }
   }
+
+
+  /*Product_List*/
+  
+  header {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  header h1 {
+    color: rgb(145, 59, 59);
+    font-family: 'Times New Roman' ;
+    font-size: 3.5rem;
+    
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  /* Filters Section */
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 150px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  #price-range {
+    width: 100%;
+  }
+  
+  /* Product Grid */
+  .product-grid1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Product Card (Only Image, No Background or Box) */
+  .product-card1111 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+ /* Product Image */
+.product-image1 {
+    width: 100%;                /* Full width of the container */
+    height: 500px;              /* Fixed height for uniformity */
+    background-size: cover;     /* Ensures the image fills the container */
+    background-position: center;/* Centers the image within the container */
+    border-radius: 8px;         /* Optional: rounded corners */
+    object-fit: cover;          /* Ensures the image fits and maintains aspect ratio */
+  }
+  
+  
+  /* Product Info Below the Image */
+  .product-info1 {
+    padding: 10px;
+    background-color: transparent;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px 0;
+  }
+  
+  .rating1 {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .price1 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #333;
+    font-weight: bold;
+  }
+  
   
   
   

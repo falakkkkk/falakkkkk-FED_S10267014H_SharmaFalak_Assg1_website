@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Display</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav-container">
+        <ul class="nav-links left-links">
+            <li><a href="index.html"><img src="images/home_icon.jpg" alt="Home" class="icon home-icon"></a></li>
+            <!-- Shop Dropdown -->
+            <li class="dropdown">
+                <a href="#">Shop</a>
+                <ul class="dropdown-menu">
+                    <li><a href="product_list.html">Lips</a></li>
+                    <li><a href="#">Face</a></li>
+                    <li><a href="#">Eyes</a></li>
+                    <li><a href="#">Skin</a></li>
+                </ul>
+            </li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+        </ul>
+        <ul class="nav-links right-links">
+            <li class="profile-icon">
+                <a href="login_signup.html"><img src="images/profile_icon.jpg" alt="Profile" class="icon profile-img"></a>
+            </li>
+            <li>
+                <form class="search-form" action="/search" method="GET">
+                    <input type="text" name="q" class="search-input" placeholder="Search..." aria-label="Search">
+                    <button type="submit">
+                        <img src="images/search_icon.jpg" alt="Search" class="icon search-icon">
+                    </button>
+                </form>
+            </li>
+            <li><a href="cart.html"><img src="images/bag_icon.jpg" alt="Bag" class="icon"></a></li>
+        </ul>
+    </nav>
+  </header>
+  
+  <header>
+    <h1>Lip Products</h1>
+    <section class="filters">
+      <!-- Skin Type Filter -->
+      <article class="dropdown">
+        <button class="dropdown-btn">Finish</button>
+        <section class="dropdown-content">
+          <label><input type="checkbox" value="Matte"> Matte</label>
+          <label><input type="checkbox" value="Glossy"> Glossy</label>
+          <label><input type="checkbox" value="Shiny"> Shiny</label>
+          
+        </section>
+      </article>
+
+      <!-- Price Filter -->
+      <article class="dropdown">
+        <button class="dropdown-btn">Price1</button>
+        <section class="dropdown-content">
+          <label for="price-range">Adjust Range:</label>
+          <input type="range" id="price-range" min="10" max="50" step="1">
+          <span id="price-value">$10 - $50</span>
+        </section>
+      </article>
+
+      <!-- Rating Filter -->
+      <article class="dropdown">
+        <button class="dropdown-btn">Rating</button>
+        <section class="dropdown-content">
+          <label><input type="radio" name="rating-sort" value="high-to-low"> High to Low</label>
+          <label><input type="radio" name="rating-sort" value="low-to-high"> Low to High</label>
+        </section>
+      </article>
+    </section>
+  </header>
+
+  <main class="product-grid1">
+    <!-- Product 1 -->
+    <article class="product-card1">
+      <a href="product.html" class="product-link">
+        <figure class="product-image1" style="background-image: url('images/lipstick_product.jpg');"></figure>
+        <section class="product-info1">
+          <h2>Velvet Reverie</h2>
+          <p class="rating1">★★★★☆</p>
+          <p class="price1">$45.00</p>
+        </section>
+      </a>
+    </article>
+
+    <!-- Product 2 -->
+    <article class="product-card1">
+      <figure class="product-image1" style="background-image: url('images/product_1.jpg');"></figure>
+      <section class="product-info1">
+        <h2>Midnight Embrace</h2>
+        <p class="rating1">★★★★☆</p>
+        <p class="price1">$39.00</p>
+      </section>
+    </article>
+
+    <!-- Product 3 -->
+    <article class="product-card1">
+      <figure class="product-image1" style="background-image: url('images/product_2.jpg');"></figure>
+      <section class="product-info1">
+        <h2>Eternal Whisper</h2>
+        <p class="rating1">★★★★☆</p>
+        <p class="price1">$37.00</p>
+      </section>
+    </article>
+
+    <!-- Product 4 -->
+    <article class="product-card1">
+      <figure class="product-image1" style="background-image: url('images/product_3.jpg');"></figure>
+      <section class="product-info1">
+        <h2>Mystic Bloom</h2>
+        <p class="rating1">★★★★☆</p>
+        <p class="price1">$66</p>
+      </section>
+    </article>
+
+    <!-- Product 5 -->
+    <article class="product-card1">
+      <figure class="product-image1" style="background-image: url('images/product_4.jpg');"></figure>
+      <section class="product-info1">
+        <h2>Rosewood Reverie</h2>
+        <p class="rating1">★★★★☆</p>
+        <p class="price1">$59</p>
+      </section>
+    </article>
+
+    <!-- Product 6 -->
+    <article class="product-card1">
+      <figure class="product-image1" style="background-image: url('images/product_5.jpg');"></figure>
+      <section class="product-info1">
+        <h2>Moonlit Muse</h2>
+        <p class="rating1">★★★★☆</p>
+        <p class="price1">$62</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
+
+
